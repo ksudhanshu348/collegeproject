@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="wheat">
+<div style="border:2px solid green" padding:30px><center><h1>Shaswat<br>*Registration Form*</h1></center></div>
+<h2>Basic Information :-</h2>
+<script type="text/javascript" language="javascript">
+  function EnableDisableTextBox(stud) {
+        var passwd = document.getElementById("passwd");
+       passwd.disabled = stud.checked ? false : true;
+        if (!passwd.disabled) {
+            passwd.focus();
+        }
+    }
+    function EnableDisableTextBo(tshirt) {
+        var size = document.getElementById("size");
+       size.disabled = tshirt.checked ? false : true;
+        if (!size.disabled) {
+            size.focus();
+        }
+    }
+</script>
+<form action="lis.php" method="POST">
+<br>
+<center><h3> First Name:
+<input type="text" name="fname" placeholder="First Name">
+<br><br>
+ Last Name:
+<input type="text" name="lname" placeholder="Last Name">
+<br><br>
+  Gender:
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+<br><br>
+  College Name:
+<input type="text" name="cname" placeholder="College Name">
+<br><br>
+  Branch:
+<input type="text" name="bname" placeholder="Branch">
+<br><br>
+  Year:
+<input type="radio" name="year" value="1"> 1st 
+<input type="radio" name="year" value="2"> 2nd
+<input type="radio" name="year" value="3"> 3rd
+<input type="radio" name="year" value="4"> 4th
+<br><br>
+  Mobile No:
+<input type="number" name="mob" placeholder="Mobile No">
+<br><br>
+  E-mail:
+<input type="email" name="email" placeholder="Email">
+<br><br>
+  City:
+<input type="text" name="city" placeholder="City">
+</center>
+<h2><u>Your Intrest :</u></h2>
+<br>
+<center>
+<h2><u>EVENTS:</u></h2>
+<br>
+<h2><u>WORKSHOP</u></h2>
+<label><input type="checkbox" name="event"></label>
+Machine Learning
+<br><br>
+<label><input type="checkbox" name="event"></label>
+Robotics
+<br><br>
+<label><input type="checkbox" name="event"></label>
+Artificial Intelligence
+<br><br>
+<h2><u>GAMING WIZARD</u></h2>
+<label><input type="checkbox" name="game"></label>
+Counter Strike
+<br><br>
+<label><input type="checkbox" name="game"></label>
+Pubg Pc Lite
+<br><br>
+<h4><label><input type="checkbox" name="accommodation"></label>
+For Accommodation</h4>
+<h4><label><input type="checkbox" name="tshirt" onclick="EnableDisableTextBo(this)"></label>
+For T-shirt
+<select id="size" disabled="disabled">
+    <option value="Size">Size</option>
+    <option value="size">S</option>
+    <option value="size">M</option>
+    <option value="size">L</option>
+</select></h4>
+<br>
+<h4><label><input type="checkbox" name="stud" id="stud" onclick="EnableDisableTextBox(this)"></label>
+Only For IIIT BHAGALPUR Students
+<br><br>
+Password:
+<input type="password" name="password" id="passwd" placeholder="Password" disabled="disabled">
+<label><input type="submit" name="stud" id="stud" value='check' onclick="match()"></label></h4>
+<h4> <input type="submit" value="Submit"></h4>
+</form>
+</center> 
+</body>
+</html>
